@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+  <script src="jsfile/api.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+<body>
+
+<div class="form-group">
+        <label for="room">Select Location:</label>
+        <script>getRooms();</script>
+        <select class="form-control" id="room">
+          <option>N/A</option>
+        </select>
+</div>
+
+
+<button type="button" class="btn btn-primary btn-lg" onclick="getPossibleUsers()">Check Location</button>
+<p id="loading"></p>>
+
+<div class="form-group">
+            <label for="num">Select Reminder Num:</label>
+            <select class="form-control" id="num">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+</div>
+
+
+  <div class="input-group">
+    <span class="input-group-addon">Subject</span>
+    <input id="subj_msg" type="text" class="form-control" name="message" placeholder="Type your subject here">
+  </div>
+
+  <textarea id="msg"rows="10" cols="50" placeholder="Type your message here"></textarea>
+
+  </br>
+  <button type="button" class="btn btn-primary btn-lg" onclick="sendMessage()">Send</button>
+  
+
+
+  <p></br></br></br>For the testing purpose: you can check the following information</p>
+  <div class="form-group">
+      <label for="selectLocation">People currently in this selected Location</label>
+      <select class="form-control" id="selectLocation">
+      </select>
+  </div>
+  
+  <div class="form-group">
+      <label for="people">People currently in any building</label>
+      <select class="form-control" id="people">
+      </select>
+
+  </div>
+</body>
+</html>
